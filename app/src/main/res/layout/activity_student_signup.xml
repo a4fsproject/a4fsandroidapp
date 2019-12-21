@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".User_signup"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <EditText
+        android:id="@+id/edt_enroll_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="12"
+        android:gravity="left"
+        android:hint="Enrollment Number"
+        android:maxLength="12"
+        android:inputType="phone"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/edt_student_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Student Name"
+        android:inputType="textEmailAddress"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/edt_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Student Mobile Number"
+        android:maxLength="10"
+        android:inputType="phone"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Student Password"
+        android:inputType="textPassword"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/edt_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Student Address"
+        android:inputType="textEmailAddress"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/edt_DOB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:hint="Student DOB"
+        android:inputType="date"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="true"/>
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:hint="Student E-mail"
+        android:inputType="textEmailAddress"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/edt_branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:hint="Student Branch"
+        android:inputType="textEmailAddress"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"
+        android:visibility="gone"/>
+
+    <Spinner
+        android:id="@+id/spbranch"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edt_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:hint="Student Semester"
+        android:maxLength="2"
+        android:ems="2"
+        android:inputType="number"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"
+        android:visibility="gone"/>
+
+    <Spinner
+        android:id="@+id/spsemester"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"/>
+
+    <CheckBox
+        android:id="@+id/terms_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I Agree With Terms And Conditions"
+        android:textColor="@color/colorBrown"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp"
+        android:gravity="left|center_vertical"/>
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_border_corner"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:textAllCaps="false"
+        android:text="Sign Up"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/Already_Account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already Have An Account? Sign Up"
+        android:textColor="@color/colorBrown"
+        android:gravity="center"/>
+
+</LinearLayout>
+
+</ScrollView>

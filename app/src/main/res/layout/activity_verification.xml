@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_login"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/inner_image"
+        android:layout_above="@+id/ll_content"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:paddingTop="32dp">
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verification"
+            android:textColor="@color/colorBrown"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:id="@+id/sub_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Your OTP To Verify Your Account"
+            android:textColor="@android:color/darker_gray"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentBottom="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="48dp">
+
+            <EditText
+                android:id="@+id/edt_num1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:gravity="left"
+                android:maxLength="1"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:backgroundTint="@color/colorBrown"
+                android:textColor="@color/colorBrown"/>
+
+            <EditText
+                android:id="@+id/edt_num2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:gravity="left"
+                android:maxLength="1"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:backgroundTint="@color/colorBrown"
+                android:textColor="@color/colorBrown"/>
+
+            <EditText
+                android:id="@+id/edt_num3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:gravity="left"
+                android:maxLength="1"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/colorBrown"
+                android:textColor="@color/colorBrown"/>
+
+            <EditText
+                android:id="@+id/edt_num4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:gravity="left"
+                android:maxLength="1"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/colorBrown"
+                android:textColor="@color/colorBrown"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:background="@drawable/round_border_corner"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
