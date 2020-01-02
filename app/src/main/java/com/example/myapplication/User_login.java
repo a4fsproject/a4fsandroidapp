@@ -44,6 +44,10 @@ public class User_login extends AppCompatActivity implements DataInterface {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent i=new Intent(User_login.this, User_homepage.class);
+                startActivity(i);
+
                 if (!Commonfunction.checkMobileNo(edt_mobile_number.getText().toString())) {
                     edt_mobile_number.setError("Please Enter Valid mobile No.");
                     return;
