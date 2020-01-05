@@ -45,9 +45,6 @@ public class User_login extends AppCompatActivity implements DataInterface {
             @Override
             public void onClick(View view) {
 
-                Intent i=new Intent(User_login.this, User_homepage.class);
-                startActivity(i);
-
                 if (!Commonfunction.checkMobileNo(edt_mobile_number.getText().toString())) {
                     edt_mobile_number.setError("Please Enter Valid mobile No.");
                     return;
@@ -58,15 +55,12 @@ public class User_login extends AppCompatActivity implements DataInterface {
                     return;
                 }
 
-
                 String url = Constants.Webserive_Url+"user_login.php";
                 HashMap<String,String> params = new HashMap<>();
                 params.put("u_mob_number",edt_mobile_number.getText().toString());
                 params.put("password",edt_password.getText().toString());
 
-
                 volley.CallVolley(url,params,"user_login");
-
             }
         });
 
@@ -104,6 +98,8 @@ public class User_login extends AppCompatActivity implements DataInterface {
 
             Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
 
+            Intent i=new Intent(User_login.this, User_homepage.class);
+            startActivity(i);
         }
         catch (Exception e){
             e.printStackTrace();
