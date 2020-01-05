@@ -47,9 +47,6 @@ public class Student_Login extends AppCompatActivity implements DataInterface {
             @Override
             public void onClick(View view) {
 
-                Intent i=new Intent(Student_Login.this, Student_Home_Page.class);
-                startActivity(i);
-
                 if (!Commonfunction.checkEnrollno(edt_enroll_number.getText().toString())) {
                     edt_enroll_number.setError("Please Enter Valid Enrollment No.");
                     return;
@@ -103,6 +100,8 @@ public class Student_Login extends AppCompatActivity implements DataInterface {
 
             Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
 
+            Intent i=new Intent(Student_Login.this, Student_Home_Page.class);
+            startActivity(i);
         }
         catch (Exception e){
             e.printStackTrace();
