@@ -2,17 +2,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".User_Selection"
     android:orientation="vertical"
     android:gravity="left"
-    android:background="#ececec">
+    android:background="#ececec"
+    android:paddingBottom="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,12 +25,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/teacher" />
 
@@ -41,7 +42,7 @@
                 android:gravity="left"
                 android:text="Attendence"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -51,9 +52,9 @@
                 android:gravity="left"
                 android:text="Upload attendence"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
@@ -64,12 +65,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/teacher" />
 
@@ -79,7 +81,7 @@
                 android:gravity="left"
                 android:text="Marks"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -89,9 +91,9 @@
                 android:gravity="left"
                 android:text="Upload Marks"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
@@ -109,12 +111,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/teacher" />
 
@@ -124,7 +128,7 @@
                 android:gravity="left"
                 android:text="Leave"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -134,9 +138,9 @@
                 android:gravity="left"
                 android:text="Request for leave"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
@@ -147,24 +151,26 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/teacher" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="left"
-                android:text="Manged leave"
+                android:text="Manage Leave"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="20dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -172,9 +178,9 @@
                 android:gravity="left"
                 android:text="Leave Management"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
 
 
@@ -194,12 +200,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/teacher" />
 
@@ -209,7 +217,7 @@
                 android:gravity="left"
                 android:text="Assignment"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -219,11 +227,12 @@
                 android:gravity="left"
                 android:text="Upload Assignment"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/Report"
             android:layout_width="0dp"
@@ -231,12 +240,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/teacher" />
 
@@ -246,7 +256,7 @@
                 android:gravity="left"
                 android:text="Work Report"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
             <TextView
@@ -255,13 +265,12 @@
                 android:gravity="left"
                 android:text="Upload Work Report"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
 
         </LinearLayout>
-
 
     </LinearLayout>
 
@@ -277,12 +286,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/teacher" />
 
@@ -292,19 +303,19 @@
                 android:gravity="left"
                 android:text="Schedule"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Upoload Schedule"
-                android:textColor="@color/colorBrown"
-                android:textSize="22sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="20dp"/>
-
+                android:text="Upload Schedule "
+                android:textColor="#808080"
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -314,12 +325,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/teacher" />
 
@@ -327,9 +339,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="placement"
+                android:text="Placement"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -339,13 +351,14 @@
                 android:gravity="left"
                 android:text="Placement cell"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
     </LinearLayout>
 
 </LinearLayout>
+
 </ScrollView>
