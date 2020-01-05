@@ -58,7 +58,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/student_marks"
+            android:id="@+id/Student_Marks"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/leave"
+            android:id="@+id/Leave"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Request For Leave"
+                android:text="Request for leave"
                 android:textColor="#808080"
                 android:textSize="15sp"
                 android:textStyle="bold|italic"
@@ -141,7 +141,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/manage_leave"
+            android:id="@+id/Student_leave"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -160,7 +160,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Manage Leave"
+                android:text="Manged leave"
                 android:textColor="@color/colorBrown"
                 android:textSize="22sp"
                 android:textStyle="bold|italic"
@@ -176,6 +176,8 @@
                 android:textStyle="bold|italic"
                 android:layout_marginTop="8dp"/>
 
+
+
         </LinearLayout>
 
     </LinearLayout>
@@ -186,7 +188,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/assignment"
+            android:id="@+id/Assignment"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -222,9 +224,8 @@
                 android:layout_marginTop="8dp"/>
 
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/daily_report"
+            android:id="@+id/Report"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -248,7 +249,6 @@
                 android:textSize="22sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -259,7 +259,9 @@
                 android:textStyle="bold|italic"
                 android:layout_marginTop="8dp"/>
 
+
         </LinearLayout>
+
 
     </LinearLayout>
 
@@ -269,7 +271,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/schedule"
+            android:id="@+id/Schedule"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -293,21 +295,20 @@
                 android:textSize="22sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Upload Schedule"
-                android:textColor="#808080"
-                android:textSize="15sp"
+                android:text="Upoload Schedule"
+                android:textColor="@color/colorBrown"
+                android:textSize="22sp"
                 android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="20dp"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/placement"
+            android:id="@+id/Placement"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -326,7 +327,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Placement"
+                android:text="placement"
                 android:textColor="@color/colorBrown"
                 android:textSize="22sp"
                 android:textStyle="bold|italic"
@@ -336,7 +337,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Placement Cell"
+                android:text="Placement cell"
                 android:textColor="#808080"
                 android:textSize="15sp"
                 android:textStyle="bold|italic"
@@ -347,5 +348,4 @@
     </LinearLayout>
 
 </LinearLayout>
-
 </ScrollView>
