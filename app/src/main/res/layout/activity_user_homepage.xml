@@ -53,7 +53,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/Marks"
+            android:id="@+id/Student_Marks"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Leave"
+                android:text="request_leave"
                 android:textColor="@color/colorBrown"
                 android:textSize="22sp"
                 android:textStyle="bold|italic"
@@ -127,7 +127,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Request for leave"
+                android:text="Manage_leave"
                 android:textColor="#808080"
                 android:textSize="15sp"
                 android:textStyle="bold|italic"
@@ -136,7 +136,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/Leave1"
+            android:id="@+id/Student_leave"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Leave"
+                android:text="manged_leave"
                 android:textColor="@color/colorBrown"
                 android:textSize="22sp"
                 android:textStyle="bold|italic"
@@ -165,11 +165,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Maneged leave"
+                android:text="Upload_manged"
                 android:textColor="#808080"
                 android:textSize="15sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="8dp"/>
+
+
 
         </LinearLayout>
 
@@ -210,60 +212,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Upload Assignment"
+                android:text="Upload_Assignment"
                 android:textColor="#808080"
                 android:textSize="15sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="8dp"/>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/Schedule"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:layout_margin="16dp"
-            android:background="@drawable/shape_corner_white">
-
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="left"
-                android:src="@drawable/teacher" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:text="Schedule"
-                android:textColor="@color/colorBrown"
-                android:textSize="22sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="20dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:text="Upload Schedule"
-                android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
         <LinearLayout
             android:id="@+id/Report"
             android:layout_width="0dp"
@@ -284,7 +239,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Daily Report"
+                android:text="Daily_Report"
+                android:textColor="@color/colorBrown"
+                android:textSize="22sp"
+                android:textStyle="bold|italic"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/Report1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/shape_corner_white">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left"
+                android:src="@drawable/teacher" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Daily_Report"
                 android:textColor="@color/colorBrown"
                 android:textSize="22sp"
                 android:textStyle="bold|italic"
@@ -293,7 +284,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Daily Report"
+                android:text="Daily_Report"
                 android:textColor="@color/colorBrown"
                 android:textSize="22sp"
                 android:textStyle="bold|italic"
@@ -340,5 +331,90 @@
         </LinearLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/Attendence"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/shape_corner_white">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left"
+                android:src="@drawable/teacher" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Attendence"
+                android:textColor="@color/colorBrown"
+                android:textSize="22sp"
+                android:textStyle="bold|italic"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Upload attendence"
+                android:textColor="#808080"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Student_Marks1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/shape_corner_white">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="left"
+                android:src="@drawable/teacher" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Marks"
+                android:textColor="@color/colorBrown"
+                android:textSize="22sp"
+                android:textStyle="bold|italic"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Upload Marks"
+                android:textColor="#808080"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>
