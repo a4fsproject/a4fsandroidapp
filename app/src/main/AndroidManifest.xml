@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".User_homepage"></activity>
-        <activity android:name=".Student_Home_Page"></activity>
+        <activity android:name=".Student_leave"></activity>
+        <activity android:name=".User_homepage" />
+        <activity android:name=".Student_Home_Page" />
         <activity android:name=".Verification" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".ForgotPassword" />

@@ -2,13 +2,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="#ececec">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".User_Selection"
     android:orientation="vertical"
     android:gravity="left"
@@ -30,8 +29,8 @@
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/student" />
 
@@ -41,7 +40,7 @@
                 android:gravity="left"
                 android:text="Attendance"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -51,9 +50,9 @@
                 android:gravity="left"
                 android:text="Check Attendance"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:textStyle="normal|italic" />
 
         </LinearLayout>
 
@@ -64,12 +63,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/student" />
 
@@ -79,7 +79,7 @@
                 android:gravity="left"
                 android:text="Marks"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -89,9 +89,9 @@
                 android:gravity="left"
                 android:text="View Internal Marks"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
@@ -109,12 +109,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/student" />
 
@@ -124,7 +126,7 @@
                 android:gravity="left"
                 android:text="Leave"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -134,9 +136,9 @@
                 android:gravity="left"
                 android:text="Request For Leave"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
@@ -147,12 +149,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/student" />
 
@@ -162,7 +164,7 @@
                 android:gravity="left"
                 android:text="Schedule"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -172,9 +174,9 @@
                 android:gravity="left"
                 android:text="View All Schedules"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
@@ -192,12 +194,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/student" />
 
@@ -207,7 +211,7 @@
                 android:gravity="left"
                 android:text="Assignment"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -217,9 +221,9 @@
                 android:gravity="left"
                 android:text="Check Assignment"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
@@ -230,12 +234,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/student" />
 
@@ -245,7 +249,7 @@
                 android:gravity="left"
                 android:text="Fees"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -255,9 +259,9 @@
                 android:gravity="left"
                 android:text="Check Fees Criteria"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
@@ -275,12 +279,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/student" />
 
@@ -290,7 +296,7 @@
                 android:gravity="left"
                 android:text="Library"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -300,9 +306,9 @@
                 android:gravity="left"
                 android:text="Find Books"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
@@ -313,12 +319,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_margin="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left"
                 android:src="@drawable/student" />
 
@@ -328,7 +334,7 @@
                 android:gravity="left"
                 android:text="Feedback"
                 android:textColor="@color/colorBrown"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold|italic"
                 android:layout_marginTop="20dp"/>
 
@@ -338,9 +344,9 @@
                 android:gravity="left"
                 android:text="Give Feedback"
                 android:textColor="#808080"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="4dp"/>
 
         </LinearLayout>
 
