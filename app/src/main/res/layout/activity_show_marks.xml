@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".Show_marks"
+        android:gravity="top"
+        android:layout_gravity="top">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Date:8th January 2020"
+            android:textColor="@color/colorBrown"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:padding="24dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Total Marks"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"/>
+
+        <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar
+            android:id="@+id/progress_bar_1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:indeterminate="false"
+            android:maxHeight="20dp"
+            android:minHeight="20dp"
+            android:progress="80"
+            app:backgroundColor="#efefef"
+            android:layout_marginTop="8dp"
+            app:progressColor="@android:color/holo_red_light"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp"
+            android:background="#f4f4f4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:id="@+id/txt_cplus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="c++"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/cplus_theory"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Theory"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/cplus_practical"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Practical"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/cplus_total"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Total"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:id="@+id/txt_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Java"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/java_theory"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Theory"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/java_practical"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Practical"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/java_total"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Total"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:id="@+id/txt_dotnet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text=".Net"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/dotnet_theory"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Theory"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/dotnet_practical"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Practical"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/dotnet_total"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Total"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:id="@+id/txt_web_technology"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Web Technology"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/web_theory"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Theory"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/web_practical"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Practical"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/web_total"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Total"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:id="@+id/txt_cyber_security"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Cyber Security"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/cyber_theory"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Theory"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/cyber_practical"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Practical"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                            android:id="@+id/cyber_total"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:direction="clockwise"
+                            app:dotColor="@android:color/darker_gray"
+                            app:dotWidth="5dp"
+                            app:drawDot="true"
+                            app:enableProgressAnimation="true"
+                            app:progressBackgroundColor="@android:color/holo_red_light"
+                            app:progressCap="round"
+                            app:progressColor="@android:color/black"
+                            app:progressStrokeWidth="8dp"
+                            app:textColor="@color/colorAccent"
+                            app:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="left"
+                            android:text="Total"
+                            android:textColor="#3c3c3c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
