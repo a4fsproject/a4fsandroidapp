@@ -16,7 +16,6 @@
         android:background="#efefef"/>
 
     <LinearLayout
-        android:id="@+id/list_leave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -33,8 +32,8 @@
             android:focusableInTouchMode="false"
             android:gravity="center"
             android:inputType="date"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="From date"
             android:textColor="@android:color/black"
             android:textSize="18sp"
@@ -50,8 +49,8 @@
             android:focusableInTouchMode="false"
             android:gravity="center"
             android:inputType="date"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="To date"
             android:textColor="@android:color/black"
             android:textSize="18sp"
@@ -68,12 +67,51 @@
         android:focusableInTouchMode="false"
         android:gravity="left"
         android:inputType="date"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:paddingLeft="8dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
         android:textSize="16sp"
-        android:paddingRight="8dp"
+        android:paddingRight="10dp"
         android:text="Reason for Leave"
         android:textColor="#3c3c3c" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_reject"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Reject"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_red_dark"
+            android:layout_marginLeft="16dp"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+    </LinearLayout>
 
 </LinearLayout>
