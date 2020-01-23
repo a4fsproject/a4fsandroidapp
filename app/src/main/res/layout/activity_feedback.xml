@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feedback"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:paddingTop="32dp">
+
+        <TextView
+            android:id="@+id/select_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Give Ratings"
+            android:textColor="@color/colorBrown"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:rating="2.0"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/edt_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="Give Your Comments"
+            android:maxLength="10"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textSize="16sp"
+            android:paddingTop="20dp"
+            android:paddingBottom="24dp"
+            android:textColor="@color/colorBrown"/>
+
+        <Button
+            android:id="@+id/btn_feedback_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:background="@drawable/round_border_corner"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"/>
+
+        <Button
+            android:id="@+id/btn_feedback_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:background="@drawable/round_border_corner1"
+            android:textColor="@color/colorBrown"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

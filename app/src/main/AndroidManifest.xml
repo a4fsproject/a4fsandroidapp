@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Add_marks"></activity>
+        <activity android:name=".Add_WorkReport"></activity>
+        <activity android:name=".Feedback" />
+        <activity android:name=".Add_marks" />
         <activity android:name=".Leave_List" />
         <activity android:name=".Student_leave" />
         <activity android:name=".User_homepage" />
