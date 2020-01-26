@@ -21,7 +21,7 @@ public class User_Selection extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(User_Selection.this, Student_Login.class);
+                Intent i=new Intent(User_Selection.this, Feedback.class);
                 startActivity(i);
             }
         });
@@ -29,7 +29,7 @@ public class User_Selection extends AppCompatActivity {
         users.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(User_Selection.this, User_login.class);
+                Intent i=new Intent(User_Selection.this, Add_WorkReport.class);
                 startActivity(i);
             }
         });

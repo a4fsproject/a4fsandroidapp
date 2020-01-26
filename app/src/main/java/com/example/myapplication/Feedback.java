@@ -45,7 +45,7 @@ public class Feedback extends AppCompatActivity implements DataInterface {
             @Override
             public void onClick(View view) {
 
-                if (!Commonfunction.checkEnrollno(edt_comments.getText().toString())) {
+                if (!Commonfunction.checkString(edt_comments.getText().toString())) {
                     edt_comments.setError("Please Give Your Comments.");
                     return;
                 }

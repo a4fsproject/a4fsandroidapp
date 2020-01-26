@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -18,6 +19,9 @@ import com.example.myapplication.utils.Webservice_Volley;
 
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 public class Add_WorkReport extends AppCompatActivity implements DataInterface {
@@ -30,6 +34,9 @@ public class Add_WorkReport extends AppCompatActivity implements DataInterface {
     Button btn_upload;
 
     Webservice_Volley volley;
+
+    ArrayList<String> branchList = new ArrayList<>();
+    ArrayList<String> semList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +51,44 @@ public class Add_WorkReport extends AppCompatActivity implements DataInterface {
 
         volley = new Webservice_Volley(this,this);
 
+
+        branchList.add("Select Branch");
+        branchList.add("Computer Engg.");
+        branchList.add("Mechanical Engg.");
+
+
+        semList.add("Select semester");
+        semList.add("1st");
+        semList.add("2nd");
+        semList.add("3rd");
+
+        ArrayAdapter<String> da = new ArrayAdapter<>(Add_WorkReport.this,android.R.layout.simple_spinner_dropdown_item,branchList);
+        spbranch.setAdapter(da);
+
+        ArrayAdapter<String> da1 = new ArrayAdapter<>(Add_WorkReport.this,android.R.layout.simple_spinner_dropdown_item,semList);
+        spsemester.setAdapter(da1);
+
         btn_upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (!Commonfunction.checkEnrollno(edt_sub_code.getText().toString())) {
+                if (!Commonfunction.checkString(edt_sub_code.getText().toString())) {
                     edt_sub_code.setError("Please Enter Valid Subject Code");
                     return;
                 }
 
-                if (!Commonfunction.checkPassword(edt_comments.getText().toString())) {
+                if (!Commonfunction.checkString(edt_comments.getText().toString())) {
                     edt_comments.setError("Please Enter Proper Details");
+                    return;
+                }
+
+                if (spbranch.getSelectedItemPosition() <= 0) {
+                    Toast.makeText(Add_WorkReport.this, "Please Select Branch !!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (spsemester.getSelectedItemPosition() <= 0) {
+                    Toast.makeText(Add_WorkReport.this, "Please Select Semester !!", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -62,8 +96,11 @@ public class Add_WorkReport extends AppCompatActivity implements DataInterface {
                 HashMap<String,String> params = new HashMap<>();
                 params.put("sub_code",edt_sub_code.getText().toString());
                 params.put("w_details",edt_comments.getText().toString());
-                params.put("w_date","");
-                params.put("u_id","");
+                params.put("w_date",new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+                params.put("u_id","3");
+                params.put("s_branch",spbranch.getSelectedItem().toString());
+                params.put("s_semester",spsemester.getSelectedItem().toString());
+                params.put("sub_name","sub name");
 
                 volley.CallVolley(url,params,"add_work_report");
             }
