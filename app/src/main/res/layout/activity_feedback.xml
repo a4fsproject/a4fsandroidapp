@@ -69,17 +69,6 @@
             android:layout_gravity="center"
             android:layout_marginTop="40dp"/>
 
-        <Button
-            android:id="@+id/btn_feedback_reset"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Reset"
-            android:background="@drawable/round_border_corner1"
-            android:textColor="@color/colorBrown"
-            android:textAllCaps="false"
-            android:textSize="17sp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"/>
 
     </LinearLayout>
 
