@@ -29,7 +29,7 @@ public class User_Selection extends AppCompatActivity {
         users.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(User_Selection.this, Add_WorkReport.class);
+                Intent i=new Intent(User_Selection.this, Add_marks.class);
                 startActivity(i);
             }
         });

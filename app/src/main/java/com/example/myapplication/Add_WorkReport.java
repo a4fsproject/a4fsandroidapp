@@ -57,10 +57,15 @@ public class Add_WorkReport extends AppCompatActivity implements DataInterface {
         branchList.add("Mechanical Engg.");
 
 
-        semList.add("Select semester");
+        semList.add("Select Semester");
         semList.add("1st");
         semList.add("2nd");
         semList.add("3rd");
+        semList.add("4th");
+        semList.add("5th");
+        semList.add("6th");
+        semList.add("7th");
+        semList.add("8th");
 
         ArrayAdapter<String> da = new ArrayAdapter<>(Add_WorkReport.this,android.R.layout.simple_spinner_dropdown_item,branchList);
         spbranch.setAdapter(da);
