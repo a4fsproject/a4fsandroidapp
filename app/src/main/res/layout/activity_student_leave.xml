@@ -17,11 +17,11 @@
         android:layout_gravity="center">
 
         <EditText
-            android:id="@+id/from_date"
+            android:id="@+id/edt_from_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:hint="From date"
+            android:hint="From Date"
             android:inputType="date"
             android:paddingTop="20dp"
             android:paddingBottom="24dp"
@@ -30,12 +30,12 @@
             android:clickable="true"/>
 
         <EditText
-            android:id="@+id/to_date"
+            android:id="@+id/edt_to_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:gravity="left"
-            android:hint="To date"
+            android:hint="To Date"
             android:inputType="date"
             android:paddingTop="20dp"
             android:paddingBottom="24dp"
@@ -44,7 +44,7 @@
             android:clickable="true"/>
 
         <TextView
-            android:id="@+id/select_image"
+            android:id="@+id/txt_select_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
@@ -63,12 +63,14 @@
             android:layout_marginTop="12dp">
 
         <ImageView
+            android:id="@+id/img_leave"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/upload" />
 
             <TextView
+                android:id="@+id/txt_upload_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
@@ -82,7 +84,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/reason"
+            android:id="@+id/edt_reason"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="24dp"
@@ -93,7 +95,7 @@
             android:paddingBottom="24dp"/>
 
         <Button
-            android:id="@+id/btn_check"
+            android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
