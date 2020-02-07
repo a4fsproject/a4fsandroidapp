@@ -50,16 +50,16 @@
             android:ems="6"
             android:gravity="left"
             android:hint="Sub Code"
-            android:maxLength="6"
             android:inputType="number"
             android:paddingTop="20dp"
-            android:paddingBottom="30dp"/>
+            android:paddingBottom="30dp"
+            android:imeOptions="actionSearch"/>
 
         <TextView
             android:id="@+id/sub_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Subject Name"
+            tools:text="Subject Name"
             android:textSize="18sp"
             android:textColor="@color/colorBrown"
             android:layout_gravity="center"
@@ -79,11 +79,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/add_student_mark_row"/>
-
-            <include layout="@layout/add_student_mark_row"/>
-
-            <include layout="@layout/add_student_mark_row"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_studentinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 

@@ -36,6 +36,14 @@ public class Student_result_Vo {
     @Expose
     private String sPhoto;
 
+    @SerializedName("theory_mark")
+    @Expose
+    private String theoryMark;
+
+    @SerializedName("practicle_mark")
+    @Expose
+    private String practicleMark;
+
     public String getEnrollNumber() {
         return enrollNumber;
     }
@@ -116,6 +124,21 @@ public class Student_result_Vo {
         this.sPhoto = sPhoto;
     }
 
+    public String getTheoryMark() {
+        return theoryMark;
+    }
+
+    public void setTheoryMark(String theoryMark) {
+        this.theoryMark = theoryMark;
+    }
+
+    public String getPracticleMark() {
+        return practicleMark;
+    }
+
+    public void setPracticleMark(String practicleMark) {
+        this.practicleMark = practicleMark;
+    }
 }
 
 

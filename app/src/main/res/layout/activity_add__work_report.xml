@@ -49,7 +49,6 @@
                 android:ems="6"
                 android:gravity="left"
                 android:hint="Sub Code"
-                android:maxLength="6"
                 android:inputType="number"
                 android:paddingTop="20dp"
                 android:paddingBottom="30dp"/>
@@ -74,7 +73,6 @@
             android:ems="10"
             android:gravity="left"
             android:hint="Add Details"
-            android:maxLength="10"
             android:inputType="textMultiLine"
             android:singleLine="false"
             android:textSize="16sp"
