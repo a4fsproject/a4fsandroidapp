@@ -21,7 +21,7 @@ public class User_Selection extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(User_Selection.this, Student_leave.class);
+                Intent i=new Intent(User_Selection.this, User_leave.class);
                 startActivity(i);
             }
         });

@@ -10,6 +10,7 @@
     android:layout_margin="10dp">
 
     <ImageView
+        android:id="@+id/img_leave"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/upload"
@@ -24,7 +25,7 @@
         android:paddingTop="8dp">
 
         <TextView
-            android:id="@+id/from_date"
+            android:id="@+id/txt_from_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -40,7 +41,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/to_date"
+            android:id="@+id/txt_to_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="64dp"
@@ -58,7 +59,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/reason1"
+        android:id="@+id/txt_reason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"

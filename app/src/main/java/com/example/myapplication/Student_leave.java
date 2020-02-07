@@ -128,14 +128,13 @@ public class Student_leave extends AppCompatActivity implements DataInterface {
                 String url = Constants.Webserive_Url + "student_leave.php";
                 HashMap<String, String> params = new HashMap<>();
 
-                params.put("l_status","pending");
-                params.put("u_id","");
-                params.put("u_from_date", edt_from_date.getText().toString());
-                params.put("u_to_date", edt_to_date.getText().toString());
-                params.put("l_reason", edt_reason.getText().toString());
                 params.put("s_enroll_number","123456789100");
-                params.put("ul_photo","");
-                params.put("total_days","" + daysDiff);
+                params.put("from_date", edt_from_date.getText().toString());
+                params.put("to_date", edt_to_date.getText().toString());
+                params.put("reason", edt_reason.getText().toString());
+                params.put("photo","");
+                params.put("days","" + daysDiff);
+                params.put("status","pending");
 
                 volley.CallVolley(url, params, "student_leave");
 

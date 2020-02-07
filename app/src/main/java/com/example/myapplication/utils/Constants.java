@@ -6,7 +6,7 @@ package com.example.myapplication.utils;
 public class Constants {
 
 
-   public static final String Webserive_Url="http://192.168.43.119/a4fs/api/";
+   public static final String Webserive_Url="http://192.168.43.96/a4fs/api/";
 
 //   public static final String IMAGE_Url="http://192.168.1.3/Nutrition_Diet_App/Uploads/";
    //public static final String Webserive_Url="http://nutritiondiet.kstechnologies.co/api/";
