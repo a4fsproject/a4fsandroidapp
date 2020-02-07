@@ -8,13 +8,13 @@ public class StudentleaveInfoVo {
 
 @SerializedName("result")
 @Expose
-private List<Result> result = null;
+private List<StudentLeaveResultVo> result = null;
 
-public List<Result> getResult() {
+public List<StudentLeaveResultVo> getResult() {
 return result;
 }
 
-public void setResult(List<Result> result) {
+public void setResult(List<StudentLeaveResultVo> result) {
 this.result = result;
 }
 
