@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".userleavelist"></activity>
+        <activity android:name=".schedule"></activity>
+        <activity android:name=".upload_assignment" />
+        <activity android:name=".userleavelist" />
         <activity android:name=".Add_WorkReport" />
         <activity android:name=".Feedback" />
         <activity android:name=".Add_marks" />
