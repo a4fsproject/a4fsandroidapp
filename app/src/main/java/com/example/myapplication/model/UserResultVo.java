@@ -32,6 +32,30 @@ public class UserResultVo {
     @SerializedName("total_days")
     @Expose
     private String totalDays;
+    @SerializedName("u_name")
+    @Expose
+    private String uName;
+    @SerializedName("u_mob_number")
+    @Expose
+    private String uMobNumber;
+    @SerializedName("password")
+    @Expose
+    private String password;
+    @SerializedName("u_address")
+    @Expose
+    private String uAddress;
+    @SerializedName("u_designation")
+    @Expose
+    private String uDesignation;
+    @SerializedName("u_dob")
+    @Expose
+    private String uDob;
+    @SerializedName("u_email_id")
+    @Expose
+    private String uEmailId;
+    @SerializedName("u_photo")
+    @Expose
+    private String uPhoto;
 
     public String getLId() {
         return lId;
@@ -105,4 +129,67 @@ public class UserResultVo {
         this.totalDays = totalDays;
     }
 
+    public String getUName() {
+        return uName;
+    }
+
+    public void setUName(String uName) {
+        this.uName = uName;
+    }
+
+    public String getUMobNumber() {
+        return uMobNumber;
+    }
+
+    public void setUMobNumber(String uMobNumber) {
+        this.uMobNumber = uMobNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUAddress() {
+        return uAddress;
+    }
+
+    public void setUAddress(String uAddress) {
+        this.uAddress = uAddress;
+    }
+
+    public String getUDesignation() {
+        return uDesignation;
+    }
+
+    public void setUDesignation(String uDesignation) {
+        this.uDesignation = uDesignation;
+    }
+
+    public String getUDob() {
+        return uDob;
+    }
+
+    public void setUDob(String uDob) {
+        this.uDob = uDob;
+    }
+
+    public String getUEmailId() {
+        return uEmailId;
+    }
+
+    public void setUEmailId(String uEmailId) {
+        this.uEmailId = uEmailId;
+    }
+
+    public String getUPhoto() {
+        return uPhoto;
+    }
+
+    public void setUPhoto(String uPhoto) {
+        this.uPhoto = uPhoto;
+    }
 }

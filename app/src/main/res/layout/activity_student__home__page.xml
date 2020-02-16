@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ececec">
+    android:background="#ececec"
+    tools:context=".Student_Home_Page">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -112,7 +113,8 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/shape_corner_white">
+            android:background="@drawable/shape_corner_white"
+            android:onClick="CLickOnLeave">
 
             <ImageView
                 android:layout_width="60dp"
