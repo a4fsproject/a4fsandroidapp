@@ -201,6 +201,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:onClick="CLickOnassignment"
             android:background="@drawable/shape_corner_white">
 
             <ImageView
@@ -287,6 +288,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:onClick="CLickOnschedule"
             android:background="@drawable/shape_corner_white">
 
             <ImageView

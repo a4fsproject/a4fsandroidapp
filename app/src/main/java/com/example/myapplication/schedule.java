@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,6 +21,7 @@ import com.google.gson.Gson;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -34,6 +36,10 @@ public class schedule extends AppCompatActivity implements DataInterface {
 
     Webservice_Volley volley;
 
+    ArrayList<String> scheduleTypeList = new ArrayList<>();
+    ArrayList<String> semList = new ArrayList<>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +52,28 @@ public class schedule extends AppCompatActivity implements DataInterface {
         btn_submit = (Button) findViewById(R.id.btn_submit);
 
         volley = new Webservice_Volley(this, this);
+
+
+        scheduleTypeList.add("Select Schedule");
+        scheduleTypeList.add("External Exam");
+        scheduleTypeList.add("Internal Exam");
+        scheduleTypeList.add("Expert Lectures");
+
+        semList.add("Select Semester");
+        semList.add("1");
+        semList.add("2");
+        semList.add("3");
+        semList.add("4");
+        semList.add("5");
+        semList.add("6");
+        semList.add("7");
+        semList.add("8");
+
+        ArrayAdapter<String> da = new ArrayAdapter<>(schedule.this,android.R.layout.simple_spinner_dropdown_item,scheduleTypeList);
+        spschedtype.setAdapter(da);
+
+        ArrayAdapter<String> da1 = new ArrayAdapter<>(schedule.this,android.R.layout.simple_spinner_dropdown_item,semList);
+        spsemester.setAdapter(da1);
 
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override

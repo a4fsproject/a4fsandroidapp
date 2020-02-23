@@ -98,8 +98,10 @@ public class User_login extends AppCompatActivity implements DataInterface {
 
             Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
 
-            Intent i=new Intent(User_login.this, User_homepage.class);
-            startActivity(i);
+            if (jsonObject.getString("response").equalsIgnoreCase("1")) {
+                Intent i = new Intent(User_login.this, User_homepage.class);
+                startActivity(i);
+            }
         }
         catch (Exception e){
             e.printStackTrace();
