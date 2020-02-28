@@ -5,7 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.util.Base64;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -19,10 +23,13 @@ import com.developer.filepicker.model.DialogConfigs;
 import com.developer.filepicker.model.DialogProperties;
 import com.developer.filepicker.view.FilePickerDialog;
 import com.example.myapplication.Utility.Commonfunction;
+import com.example.myapplication.model.SubjectInfoVo;
+import com.example.myapplication.model.SubjectResultVo;
 import com.example.myapplication.utils.Constants;
 import com.example.myapplication.utils.DataInterface;
 import com.example.myapplication.utils.Webservice_Volley;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.gson.Gson;
 
 import org.json.JSONObject;
 
@@ -31,6 +38,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -40,6 +48,7 @@ import java.util.concurrent.TimeUnit;
 
 public class upload_assignment extends AppCompatActivity implements DataInterface {
 
+    Spinner spbranch,spsemester;
     EditText edt_sub_code;
     TextView sub_name,txt_file_name,txt_upload_file;
     EditText edt_issue_date;
@@ -54,11 +63,20 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
 
     Webservice_Volley volley;
 
+    ArrayList<String> branchList = new ArrayList<>();
+    ArrayList<String> semList = new ArrayList<>();
+
+    SubjectResultVo mainSubjectResultVo = null;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_assignment);
 
+        spbranch = (Spinner) findViewById(R.id.spbranch);
+        spsemester = (Spinner) findViewById(R.id.spsemester);
         edt_sub_code = (EditText) findViewById(R.id.edt_sub_code);
         sub_name = (TextView) findViewById(R.id.sub_name);
         txt_upload_file = (TextView) findViewById(R.id.txt_upload_file);
@@ -74,6 +92,47 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
 
         calfrom = Calendar.getInstance();
         calto =Calendar.getInstance();
+
+        branchList.add("Select Branch");
+        branchList.add("Computer Engg.");
+        branchList.add("Mechanical Engg.");
+
+        semList.add("Select Semester");
+        semList.add("1");
+        semList.add("2");
+        semList.add("3");
+        semList.add("4");
+        semList.add("5");
+        semList.add("6");
+        semList.add("7");
+        semList.add("8");
+
+        ArrayAdapter<String> da = new ArrayAdapter<>(upload_assignment.this,android.R.layout.simple_spinner_dropdown_item,branchList);
+        spbranch.setAdapter(da);
+
+        ArrayAdapter<String> da1 = new ArrayAdapter<>(upload_assignment.this,android.R.layout.simple_spinner_dropdown_item,semList);
+        spsemester.setAdapter(da1);
+
+
+        edt_sub_code.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+
+                if (i == EditorInfo.IME_ACTION_SEARCH) {
+
+                    String url = Constants.Webserive_Url+"get_subject_details.php";
+                    HashMap<String,String> params = new HashMap<>();
+                    params.put("sub_code",edt_sub_code.getText().toString());
+                    volley.CallVolley(url,params,"get_subject_details");
+
+                    return true;
+                }
+
+                return false;
+            }
+        });
+
+
 
         txt_upload_file.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,7 +177,7 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
 
-                        edt_issue_date.setText(year + "-" + (day+ 1) + "-" + day);
+                        edt_issue_date.setText(year + "-" + (month+ 1) + "-" + day);
                         calfrom.set(Calendar.DAY_OF_MONTH,day);
                         calfrom.set(Calendar.YEAR,year);
                         calfrom.set(Calendar.MONTH,month);
@@ -141,7 +200,7 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
 
-                        edt_last_date.setText(year + "-" + (day + 1) + "-" + day);
+                        edt_last_date.setText(year + "-" + (month + 1) + "-" + day);
                         calto.set(Calendar.DAY_OF_MONTH,day);
                         calto.set(Calendar.YEAR,year);
                         calto.set(Calendar.MONTH,month);
@@ -161,6 +220,17 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
             @Override
             public void onClick(View view) {
 
+                if (spbranch.getSelectedItemPosition() <= 0) {
+                    Snackbar.make(view,"Please Select Branch",Snackbar.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (spsemester.getSelectedItemPosition() <= 0) {
+                    Snackbar.make(view,"Please Select Semester",Snackbar.LENGTH_LONG).show();
+                    return;
+                }
+
+
                 if (!Commonfunction.checkString(edt_issue_date.getText().toString())) {
                     edt_issue_date.setError("Please Select Issue Date");
                     return;
@@ -173,6 +243,11 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
 
                 if (!Commonfunction.checkString( edt_sub_code.getText().toString())) {
                     edt_sub_code.setError("Please Subject Code");
+                    return;
+                }
+
+                if (mainSubjectResultVo == null) {
+                    Snackbar.make(view,"Please Select Subject For Assignment.",Snackbar.LENGTH_LONG).show();
                     return;
                 }
 
@@ -191,11 +266,11 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
                 params.put("issue_date", edt_issue_date.getText().toString());
                 params.put("last_date", edt_last_date.getText().toString());
                 params.put("assign_file", encodeFileToBase64Binary);
-                params.put("sub_code",edt_sub_code .getText().toString());
-                params.put("sub_name",sub_name.getText().toString());
+                params.put("sub_code",mainSubjectResultVo.getSubCode());
+                params.put("sub_name",mainSubjectResultVo.getSubName());
                 params.put("assign_details",edt_details_of_assignment.getText().toString());
-                params.put("s_branch","");
-                params.put("s_semester","");
+                params.put("s_branch",spbranch.getSelectedItem().toString());
+                params.put("s_semester",spsemester.getSelectedItem().toString());
 
                 volley.CallVolley(url, params, "assignment");
 
@@ -209,7 +284,42 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
     public void getData(JSONObject jsonObject, String tag) {
 
         try {
-            Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+
+            if (tag.equalsIgnoreCase("get_subject_details")) {
+
+                SubjectInfoVo subjectInfoVo = new Gson().fromJson(jsonObject.toString(), SubjectInfoVo.class);
+                if (subjectInfoVo != null) {
+                    if (subjectInfoVo.getResult() != null) {
+                        if (subjectInfoVo.getResult().size() > 0) {
+
+                            mainSubjectResultVo = subjectInfoVo.getResult().get(0);
+
+                            sub_name.setText(mainSubjectResultVo.getSubName());
+
+                        }
+                        else {
+                            Toast.makeText(this, "No Subject Found.", Toast.LENGTH_LONG).show();
+                            sub_name.setText("");
+                            mainSubjectResultVo = null;
+                        }
+                    }
+                    else {
+                        Toast.makeText(this, "No Subject Found.", Toast.LENGTH_LONG).show();
+                        sub_name.setText("");
+                        mainSubjectResultVo = null;
+                    }
+                }
+                else {
+                    Toast.makeText(this, "No Subject Found.", Toast.LENGTH_LONG).show();
+                    sub_name.setText("");
+                    mainSubjectResultVo = null;
+                }
+
+            }
+            else {
+
+                Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
