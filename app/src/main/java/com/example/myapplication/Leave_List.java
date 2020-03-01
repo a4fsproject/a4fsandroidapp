@@ -5,14 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.myapplication.adapter.MyListAdapter;
 import com.example.myapplication.adapter.StudentLeaveListAdapter;
-import com.example.myapplication.model.StudentleaveInfoVo;
+import com.example.myapplication.model.StudentLeaveInfoVo;
 import com.example.myapplication.utils.Constants;
 import com.example.myapplication.utils.DataInterface;
 import com.example.myapplication.utils.Webservice_Volley;
@@ -51,7 +46,7 @@ public class Leave_List extends AppCompatActivity implements DataInterface {
 
         try {
 
-            StudentleaveInfoVo studentleaveInfoVo = new Gson().fromJson(jsonObject.toString(),StudentleaveInfoVo.class);
+            StudentLeaveInfoVo studentleaveInfoVo = new Gson().fromJson(jsonObject.toString(), StudentLeaveInfoVo.class);
 
             if (studentleaveInfoVo != null) {
 

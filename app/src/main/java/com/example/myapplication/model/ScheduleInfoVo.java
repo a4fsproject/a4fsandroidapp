@@ -4,17 +4,17 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class StudentleaveInfoVo {
+public class ScheduleInfoVo {
 
 @SerializedName("result")
 @Expose
-private List<StudentLeaveResultVo> result = null;
+private List<ScheduleResultVo> result = null;
 
-public List<StudentLeaveResultVo> getResult() {
+public List<ScheduleResultVo> getResult() {
 return result;
 }
 
-public void setResult(List<StudentLeaveResultVo> result) {
+public void setResult(List<ScheduleResultVo> result) {
 this.result = result;
 }
 

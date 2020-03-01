@@ -11,17 +11,16 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.model.StudentLeaveResultVo;
-import com.example.myapplication.model.UserResultVo;
+import com.example.myapplication.model.UserLeaveResultVo;
 
 import java.util.List;
 
 
 public class UserLeaveListAdapter extends RecyclerView.Adapter<UserLeaveListAdapter.ViewHolder>{
-    private List<UserResultVo> listdata;
+    private List<UserLeaveResultVo> listdata;
 
    // RecyclerView recyclerView;
-    public UserLeaveListAdapter(List<UserResultVo> listdata) {
+    public UserLeaveListAdapter(List<UserLeaveResultVo> listdata) {
         this.listdata = listdata;  
     }  
     @Override  
@@ -34,7 +33,7 @@ public class UserLeaveListAdapter extends RecyclerView.Adapter<UserLeaveListAdap
   
     @Override  
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        final UserResultVo myListData = listdata.get(position);
+        final UserLeaveResultVo myListData = listdata.get(position);
 
         holder.txt_reason.setText(myListData.getLReason());
         holder.txt_from_date.setText(myListData.getUFromDate());
@@ -45,7 +44,7 @@ public class UserLeaveListAdapter extends RecyclerView.Adapter<UserLeaveListAdap
 
     }
 
-    public List<UserResultVo> getListdata() {
+    public List<UserLeaveResultVo> getListdata() {
         return listdata;
     }
   

@@ -42,11 +42,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.concurrent.TimeUnit;
 
 
-
-public class upload_assignment extends AppCompatActivity implements DataInterface {
+public class Upload_assignment extends AppCompatActivity implements DataInterface {
 
     Spinner spbranch,spsemester;
     EditText edt_sub_code;
@@ -107,10 +105,10 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
         semList.add("7");
         semList.add("8");
 
-        ArrayAdapter<String> da = new ArrayAdapter<>(upload_assignment.this,android.R.layout.simple_spinner_dropdown_item,branchList);
+        ArrayAdapter<String> da = new ArrayAdapter<String>(Upload_assignment.this,android.R.layout.simple_spinner_dropdown_item,branchList);
         spbranch.setAdapter(da);
 
-        ArrayAdapter<String> da1 = new ArrayAdapter<>(upload_assignment.this,android.R.layout.simple_spinner_dropdown_item,semList);
+        ArrayAdapter<String> da1 = new ArrayAdapter<String>(Upload_assignment.this,android.R.layout.simple_spinner_dropdown_item,semList);
         spsemester.setAdapter(da1);
 
 
@@ -148,7 +146,7 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
                 properties.extensions = new String[]{"pdf"};
                 properties.show_hidden_files = false;
 
-                FilePickerDialog dialog = new FilePickerDialog(upload_assignment.this,properties);
+                FilePickerDialog dialog = new FilePickerDialog(Upload_assignment.this,properties);
                 dialog.setTitle("Select a File");
 
                 dialog.setDialogSelectionListener(new DialogSelectionListener() {
@@ -173,7 +171,7 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
             @Override
             public void onClick(View view) {
 
-                DatePickerDialog datePickerDialog = new DatePickerDialog(upload_assignment.this, new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(Upload_assignment.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
 
@@ -196,7 +194,7 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
             @Override
             public void onClick(View view) {
 
-                DatePickerDialog datePickerDialog = new DatePickerDialog(upload_assignment.this, new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(Upload_assignment.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
 
@@ -262,7 +260,6 @@ public class upload_assignment extends AppCompatActivity implements DataInterfac
                 String url = Constants.Webserive_Url + "assignment.php";
                 HashMap<String, String> params = new HashMap<>();
 
-                params.put("s_enroll_number","");
                 params.put("issue_date", edt_issue_date.getText().toString());
                 params.put("last_date", edt_last_date.getText().toString());
                 params.put("assign_file", encodeFileToBase64Binary);

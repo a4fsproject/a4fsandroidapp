@@ -1,19 +1,15 @@
 package com.example.myapplication.adapter;
 
 
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.model.Result;
-import com.example.myapplication.model.Student_result_Vo;
+import com.example.myapplication.model.StudentMarkResultVo;
 import com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar;
 
 import java.util.List;
@@ -22,10 +18,10 @@ import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator;
 
 
 public class StudentMarkListAdapter extends RecyclerView.Adapter<StudentMarkListAdapter.ViewHolder>{
-    private List<Result> listdata;
+    private List<StudentMarkResultVo> listdata;
 
    // RecyclerView recyclerView;
-    public StudentMarkListAdapter(List<Result> listdata) {
+    public StudentMarkListAdapter(List<StudentMarkResultVo> listdata) {
         this.listdata = listdata;  
     }  
     @Override  
@@ -38,11 +34,11 @@ public class StudentMarkListAdapter extends RecyclerView.Adapter<StudentMarkList
   
     @Override  
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        final Result myListData = listdata.get(position);
+        final StudentMarkResultVo myListData = listdata.get(position);
 
     }
 
-    public List<Result> getListdata() {
+    public List<StudentMarkResultVo> getListdata() {
         return listdata;
     }
   
@@ -54,9 +50,8 @@ public class StudentMarkListAdapter extends RecyclerView.Adapter<StudentMarkList
   
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView date,total,txt_cplus,txt_java,txt_dotnet;
-        RoundedHorizontalProgressBar progress_bar_1;
-        CircularProgressIndicator cplus_theory,cplus_practical,cplus_total,java_theory,java_practical,java_total,dotnet_theory,dotnet_practical,dotnet_total;
+        TextView txt_cplus;
+        CircularProgressIndicator cplus_theory,cplus_practical,cplus_total;
 
         public ViewHolder(View itemView) {  
             super(itemView);

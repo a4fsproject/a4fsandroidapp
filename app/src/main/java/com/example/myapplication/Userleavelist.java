@@ -6,10 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.myapplication.adapter.StudentLeaveListAdapter;
 import com.example.myapplication.adapter.UserLeaveListAdapter;
-import com.example.myapplication.model.StudentleaveInfoVo;
-import com.example.myapplication.model.UserleaveInfoVo;
+import com.example.myapplication.model.UserLeaveInfoVo;
 import com.example.myapplication.utils.Constants;
 import com.example.myapplication.utils.DataInterface;
 import com.example.myapplication.utils.Webservice_Volley;
@@ -19,7 +17,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-public class userleavelist extends AppCompatActivity implements DataInterface {
+public class Userleavelist extends AppCompatActivity implements DataInterface {
     Webservice_Volley volley;
 
     RecyclerView recv_Leaves;
@@ -49,7 +47,7 @@ public class userleavelist extends AppCompatActivity implements DataInterface {
 
         try {
 
-            UserleaveInfoVo userleaveInfoVo = new Gson().fromJson(jsonObject.toString(), UserleaveInfoVo.class);
+            UserLeaveInfoVo userleaveInfoVo = new Gson().fromJson(jsonObject.toString(), UserLeaveInfoVo.class);
 
             if (userleaveInfoVo != null) {
 

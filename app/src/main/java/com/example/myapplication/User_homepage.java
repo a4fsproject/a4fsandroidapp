@@ -14,15 +14,30 @@ public class User_homepage extends AppCompatActivity {
         setContentView(R.layout.activity_user_homepage);
     }
 
-    public void CLickOnassignment(View view) {
+    public void CLickOnadd_marks(View view) {
 
-        Intent i = new Intent(User_homepage.this,upload_assignment.class);
+        Intent i = new Intent(User_homepage.this, Add_marks.class);
         startActivity(i);
 
     }
+
+    public void CLickOnassignment(View view) {
+
+        Intent i = new Intent(User_homepage.this, Upload_assignment.class);
+        startActivity(i);
+
+    }
+
+    public void CLickOnadd_workreport(View view) {
+
+        Intent i = new Intent(User_homepage.this, Add_WorkReport.class);
+        startActivity(i);
+
+    }
+
     public void CLickOnschedule(View view) {
 
-        Intent i = new Intent(User_homepage.this,schedule.class);
+        Intent i = new Intent(User_homepage.this, Schedule.class);
         startActivity(i);
 
     }

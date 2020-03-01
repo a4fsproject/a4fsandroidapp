@@ -8,13 +8,13 @@ public class StudentMarkInfoVo {
 
 @SerializedName("result")
 @Expose
-private List<Result> result = null;
+private List<StudentMarkResultVo> result = null;
 
-public List<Result> getResult() {
+public List<StudentMarkResultVo> getResult() {
 return result;
 }
 
-public void setResult(List<Result> result) {
+public void setResult(List<StudentMarkResultVo> result) {
 this.result = result;
 }
 
