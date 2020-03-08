@@ -9,6 +9,18 @@
     tools:context=".Leave_List"
     android:layout_margin="10dp">
 
+    <EditText
+        android:id="@+id/edt_sub_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:gravity="left"
+        android:hint="Enter Sub Code For Filter"
+        android:inputType="number"
+        android:paddingTop="20dp"
+        android:paddingBottom="30dp"
+        android:imeOptions="actionSearch"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recv_assignment"
         android:layout_width="match_parent"

@@ -5,104 +5,71 @@ import com.google.gson.annotations.SerializedName;
 
 public class ScheduleResultVo {
 
-@SerializedName("assign_id")
-@Expose
-private String assignId;
-@SerializedName("sub_code")
-@Expose
-private String subCode;
-@SerializedName("issue_date")
-@Expose
-private String issueDate;
-@SerializedName("last_date")
-@Expose
-private String lastDate;
-@SerializedName("assign_file")
-@Expose
-private String assignFile;
-@SerializedName("assign_details")
-@Expose
-private String assignDetails;
-@SerializedName("sub_name")
-@Expose
-private String subName;
-@SerializedName("s_branch")
-@Expose
-private String sBranch;
-@SerializedName("s_semester")
-@Expose
-private String sSemester;
+    @SerializedName("schedule_id")
+    @Expose
+    private String scheduleId;
+    @SerializedName("schedule_type")
+    @Expose
+    private String scheduleType;
+    @SerializedName("schedule_file")
+    @Expose
+    private String scheduleFile;
+    @SerializedName("schedule_note")
+    @Expose
+    private String scheduleNote;
+    @SerializedName("s_semester")
+    @Expose
+    private String sSemester;
+    @SerializedName("s_branch")
+    @Expose
+    private String sBranch;
 
-public String getAssignId() {
-return assignId;
-}
+    public String getScheduleId() {
+        return scheduleId;
+    }
 
-public void setAssignId(String assignId) {
-this.assignId = assignId;
-}
+    public void setScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
+    }
 
-public String getSubCode() {
-return subCode;
-}
+    public String getScheduleType() {
+        return scheduleType;
+    }
 
-public void setSubCode(String subCode) {
-this.subCode = subCode;
-}
+    public void setScheduleType(String scheduleType) {
+        this.scheduleType = scheduleType;
+    }
 
-public String getIssueDate() {
-return issueDate;
-}
+    public String getScheduleFile() {
+        return scheduleFile;
+    }
 
-public void setIssueDate(String issueDate) {
-this.issueDate = issueDate;
-}
+    public void setScheduleFile(String scheduleFile) {
+        this.scheduleFile = scheduleFile;
+    }
 
-public String getLastDate() {
-return lastDate;
-}
+    public String getScheduleNote() {
+        return scheduleNote;
+    }
 
-public void setLastDate(String lastDate) {
-this.lastDate = lastDate;
-}
+    public void setScheduleNote(String scheduleNote) {
+        this.scheduleNote = scheduleNote;
+    }
 
-public String getAssignFile() {
-return assignFile;
-}
+    public String getSSemester() {
+        return sSemester;
+    }
 
-public void setAssignFile(String assignFile) {
-this.assignFile = assignFile;
-}
+    public void setSSemester(String sSemester) {
+        this.sSemester = sSemester;
+    }
 
-public String getAssignDetails() {
-return assignDetails;
-}
+    public String getSBranch() {
+        return sBranch;
+    }
 
-public void setAssignDetails(String assignDetails) {
-this.assignDetails = assignDetails;
-}
-
-public String getSubName() {
-return subName;
-}
-
-public void setSubName(String subName) {
-this.subName = subName;
-}
-
-public String getSBranch() {
-return sBranch;
-}
-
-public void setSBranch(String sBranch) {
-this.sBranch = sBranch;
-}
-
-public String getSSemester() {
-return sSemester;
-}
-
-public void setSSemester(String sSemester) {
-this.sSemester = sSemester;
-}
+    public void setSBranch(String sBranch) {
+        this.sBranch = sBranch;
+    }
 
 }

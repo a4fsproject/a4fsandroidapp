@@ -35,4 +35,12 @@ public class Student_Home_Page extends AppCompatActivity {
 
     }
 
+    public void CLickOnschedule(View view) {
+
+        Intent i = new Intent(Student_Home_Page.this,Show_Schedule.class);
+        startActivity(i);
+
+    }
+
+
 }

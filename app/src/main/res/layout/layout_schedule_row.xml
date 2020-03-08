@@ -21,42 +21,22 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/sub_name"
+                android:id="@+id/txt_schedule_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="left"
                 android:textColor="@color/colorBrown"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                tools:text="Subject Name" />
-
-            <TextView
-                android:id="@+id/txt_issue_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="left"
-                android:textColor="@color/colorBrown"
-                android:textSize="15sp"
-                tools:text="Issue Date" />
-
-            <TextView
-                android:id="@+id/txt_last_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="left"
-                android:textColor="@color/colorBrown"
-                android:textSize="15sp"
-                tools:text="Last Date" />
+                tools:text="Schedule Type" />
 
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/img_assignment_file"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/img_schedule_file"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_gravity="center"
             android:background="#efefef"
             android:src="@drawable/download" />
@@ -64,7 +44,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_assignment_details"
+        android:id="@+id/txt_schedule_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -72,6 +52,6 @@
         android:gravity="left"
         android:textColor="@color/colorBrown"
         android:textSize="15sp"
-        tools:text="Note:-Assignment Details" />
+        tools:text="Details:-Schedule Note" />
 
 </LinearLayout>
