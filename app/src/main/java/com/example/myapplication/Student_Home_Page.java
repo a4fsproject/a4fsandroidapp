@@ -21,6 +21,13 @@ public class Student_Home_Page extends AppCompatActivity {
 
     }
 
+    public void CLickOnattendance_scanner(View view) {
+
+        Intent i = new Intent(Student_Home_Page.this,Attendance_Scanner.class);
+        startActivity(i);
+
+    }
+
     public void CLickOnLeave(View view) {
 
         Intent i = new Intent(Student_Home_Page.this,Leave_List.class);
