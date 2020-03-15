@@ -35,5 +35,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.github.TutorialsAndroid:FilePicker:v7.0.19'
     implementation 'me.dm7.barcodescanner:zxing:1.9.13'
-
+    implementation 'com.google.zxing:core:3.2.1'
 }
