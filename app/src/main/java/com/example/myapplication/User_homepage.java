@@ -55,5 +55,18 @@ public class User_homepage extends AppCompatActivity {
         startActivity(i);
 
     }
+
+    public void CLickonUser_leave(View view) {
+        Intent i = new Intent(User_homepage.this, User_leave.class);
+        startActivity(i);
+    }
+
+    public void CLickonUserleavelist(View view) {
+        Intent i = new Intent(User_homepage.this, Userleavelist.class);
+        startActivity(i);
+    }
+
+
 }
+
 
