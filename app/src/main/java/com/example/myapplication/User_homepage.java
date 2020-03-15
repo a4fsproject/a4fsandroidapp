@@ -3,8 +3,15 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
 
 public class User_homepage extends AppCompatActivity {
 
@@ -12,6 +19,13 @@ public class User_homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_homepage);
+    }
+
+    public void CLickOngenerate_qr(View view) {
+
+        Intent i = new Intent(User_homepage.this, Generate_QR.class);
+        startActivity(i);
+
     }
 
     public void CLickOnadd_marks(View view) {

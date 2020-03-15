@@ -1,10 +1,9 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -13,14 +12,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.myapplication.Utility.Commonfunction;
 import com.example.myapplication.adapter.MyListAdapter;
-import com.example.myapplication.model.StudentInfoVo;
 import com.example.myapplication.model.SubjectInfoVo;
 import com.example.myapplication.model.SubjectResultVo;
 import com.example.myapplication.utils.Constants;
@@ -28,22 +25,24 @@ import com.example.myapplication.utils.DataInterface;
 import com.example.myapplication.utils.Webservice_Volley;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
 
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 
-public class Add_marks extends AppCompatActivity implements DataInterface {
+public class Generate_QR extends AppCompatActivity implements DataInterface {
 
     Spinner spbranch;
     Spinner spsemester;
     EditText edt_sub_code;
     TextView sub_name;
-    Button btn_upload;
-    RecyclerView rcv_studentinfo;
+    Button btn_generate_qr_code;
+    ImageView img_qr;
 
     SubjectResultVo mainSubjectResultVo = null;
 
@@ -52,21 +51,21 @@ public class Add_marks extends AppCompatActivity implements DataInterface {
     ArrayList<String> branchList = new ArrayList<>();
     ArrayList<String> semList = new ArrayList<>();
 
+    String U_id = "1";
+
     MyListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_marks);
+        setContentView(R.layout.activity_generate__qr);
 
         spbranch=(Spinner) findViewById(R.id.spbranch);
         spsemester=(Spinner) findViewById(R.id.spsemester);
         edt_sub_code=(EditText)findViewById(R.id.edt_sub_code);
         sub_name=(TextView)findViewById(R.id.sub_name);
-        btn_upload=(Button)findViewById(R.id.btn_upload);
-        rcv_studentinfo=(RecyclerView) findViewById(R.id.rcv_studentinfo);
-
-        rcv_studentinfo.setLayoutManager(new LinearLayoutManager(this));
+        btn_generate_qr_code=(Button)findViewById(R.id.btn_generate_qr_code);
+        img_qr=(ImageView) findViewById(R.id.img_qr);
 
         volley = new Webservice_Volley(this,this);
 
@@ -84,10 +83,10 @@ public class Add_marks extends AppCompatActivity implements DataInterface {
         semList.add("7");
         semList.add("8");
 
-        ArrayAdapter<String> da = new ArrayAdapter<>(Add_marks.this,android.R.layout.simple_spinner_dropdown_item,branchList);
+        ArrayAdapter<String> da = new ArrayAdapter<>(Generate_QR.this,android.R.layout.simple_spinner_dropdown_item,branchList);
         spbranch.setAdapter(da);
 
-        ArrayAdapter<String> da1 = new ArrayAdapter<>(Add_marks.this,android.R.layout.simple_spinner_dropdown_item,semList);
+        ArrayAdapter<String> da1 = new ArrayAdapter<>(Generate_QR.this,android.R.layout.simple_spinner_dropdown_item,semList);
         spsemester.setAdapter(da1);
 
         spbranch.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -144,47 +143,46 @@ public class Add_marks extends AppCompatActivity implements DataInterface {
             }
         });
 
-        btn_upload.setOnClickListener(new View.OnClickListener() {
+        btn_generate_qr_code.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if (spbranch.getSelectedItemPosition() <= 0) {
-                    Snackbar.make(view,"Please Select Branch",Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(view, "Please Select Branch", Snackbar.LENGTH_LONG).show();
                     return;
                 }
 
                 if (spsemester.getSelectedItemPosition() <= 0) {
-                    Snackbar.make(view,"Please Select Semester",Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(view, "Please Select Semester", Snackbar.LENGTH_LONG).show();
                     return;
                 }
 
                 if (mainSubjectResultVo == null) {
-                    Snackbar.make(view,"Please Select Subject For Mark.",Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(view, "Please Select Subject For Code.", Snackbar.LENGTH_LONG).show();
                     return;
                 }
 
-                if (adapter == null) {
-                    Snackbar.make(view,"No Student records found.",Snackbar.LENGTH_LONG).show();
-                    return;
+
+
+                try {
+
+                    String QR_data = U_id + "~~" + spbranch.getSelectedItem().toString() + "~~" + spsemester.getSelectedItem().toString() + "~~" + mainSubjectResultVo.getSubCode()+ "~~" + mainSubjectResultVo.getSubName();
+
+                    TextToImageEncode(QR_data);
+
+
+                } catch (WriterException e) {
+                    e.printStackTrace();
                 }
 
-                String url = Constants.Webserive_Url+"add_marks.php";
-                HashMap<String,String> params = new HashMap<>();
-                params.put("sub_code",mainSubjectResultVo.getSubCode());
-                params.put("s_branch",spbranch.getSelectedItem().toString());
-                params.put("s_semester",spsemester.getSelectedItem().toString());
-                params.put("sub_name",mainSubjectResultVo.getSubName());
-                params.put("mark_data","" +new Gson().toJsonTree(adapter.getListdata()).getAsJsonArray());
-
-
-                volley.CallVolley(url,params,"add_marks");
             }
         });
+
     }
 
     @Override
     public void getData(JSONObject jsonObject, String tag) {
-        try{
+        try {
 
             if (tag.equalsIgnoreCase("get_subject_details")) {
 
@@ -217,37 +215,45 @@ public class Add_marks extends AppCompatActivity implements DataInterface {
                 }
 
             }
-            else if (tag.equalsIgnoreCase("add_marks")) {
-                Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_LONG).show();
-
-                if (jsonObject.getString("response").equalsIgnoreCase("1")) {
-
-                    adapter = null;
-                    rcv_studentinfo.setAdapter(null);
-
-                    mainSubjectResultVo = null;
-                    edt_sub_code.setText("");
-                    sub_name.setText("");
-
-                }
-            }
-            else {
-
-                StudentInfoVo studentInfoVo = new Gson().fromJson(jsonObject.toString(), StudentInfoVo.class);
-                if (studentInfoVo != null) {
-                    if (studentInfoVo.getResult() != null) {
-                        if (studentInfoVo.getResult().size() > 0) {
-                            adapter  = new MyListAdapter(studentInfoVo.getResult());
-                            rcv_studentinfo.setAdapter(adapter);
-                        }
-                    }
-                }
-            }
 
         }
-        catch (Exception e){
+        catch (Exception e) {
             e.printStackTrace();
         }
+    }
 
+    private Bitmap TextToImageEncode(String Value) throws WriterException {
+        BitMatrix bitMatrix;
+        try {
+            bitMatrix = new MultiFormatWriter().encode(
+                    Value,
+                    BarcodeFormat.DATA_MATRIX.QR_CODE,
+                    300, 300, null
+            );
+
+        } catch (IllegalArgumentException Illegalargumentexception) {
+
+            return null;
+        }
+        int bitMatrixWidth = bitMatrix.getWidth();
+
+        int bitMatrixHeight = bitMatrix.getHeight();
+
+        int[] pixels = new int[bitMatrixWidth * bitMatrixHeight];
+
+        for (int y = 0; y < bitMatrixHeight; y++) {
+            int offset = y * bitMatrixWidth;
+
+            for (int x = 0; x < bitMatrixWidth; x++) {
+
+                pixels[offset + x] = bitMatrix.get(x, y) ?
+                        Color.BLACK :Color.WHITE;
+            }
+        }
+        Bitmap bitmap = Bitmap.createBitmap(bitMatrixWidth, bitMatrixHeight, Bitmap.Config.ARGB_4444);
+
+        bitmap.setPixels(pixels, 0, 300, 0, 0, bitMatrixWidth, bitMatrixHeight);
+        img_qr.setImageBitmap(bitmap);
+        return bitmap;
     }
 }

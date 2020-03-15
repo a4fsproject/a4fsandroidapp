@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Attendance_Scanner"></activity>
+        <activity android:name=".Generate_QR"></activity>
+        <activity android:name=".Attendance_Scanner" />
         <activity android:name=".Show_Schedule" />
         <activity android:name=".Show_assignment" />
         <activity android:name=".Schedule" />
